@@ -1,9 +1,9 @@
-import { View, Text, SafeAreaView } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 
 import { COLORS, SIZES, icons, images } from '../constants';
 
-import { ScreenHeaderBtn } from '../components';
+import { ScreenHeaderBtn, Welcome } from '../components';
 
 const Home = () => {
   const router = useRouter();
@@ -21,11 +21,22 @@ const Home = () => {
             <ScreenHeaderBtn iconURL={icons.menu} dimension="60%"/>
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconURL={images.burger} dimension="100%"/>
+            <ScreenHeaderBtn iconURL={images.burger} dimension="70%"/>
           ),
           headerTitle: "",
         }}
       />
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            flex: 1,
+            padding: SIZES.medium
+          }}
+        >
+          <Welcome />
+        </View>
+      </ScrollView>
 
     </SafeAreaView>
   )
