@@ -8,7 +8,7 @@ import {
 
 import { useRouter } from 'expo-router';
 import styles from '../homeSections.style';
-import { images } from '../../../constants';
+import { images, icons } from '../../../constants';
 
 const Alain = () => {
   const router = useRouter();
@@ -16,6 +16,10 @@ const Alain = () => {
   return (
     <View>
       <View style={styles.titleContainer}>
+        <Image
+          source={icons.favorite}
+          style={styles.icon}
+        />
         <Text style={styles.titleText}>Alain Chabat</Text>
       </View>
 

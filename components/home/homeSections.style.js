@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     alignItems: "center",
     backgroundColor: COLORS.gray2,
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 
   container: {
@@ -24,6 +26,14 @@ const styles = StyleSheet.create({
   },
 
   text: {
+  },
+
+  icon: {
+    width: 20,
+    height: 20,
+    resizeMode: 'contain',
+    marginRight: 10,
+    opacity: .5,
   },
 
   playBtn: {

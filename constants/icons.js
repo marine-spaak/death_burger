@@ -13,6 +13,8 @@ import nine from "../assets/icons/nine.png";
 import ten from "../assets/icons/ten.png";
 import next from '../assets/icons/next.png';
 import play from '../assets/icons/play.png';
+import star from '../assets/icons/star.png';
+import favorite from '../assets/icons/favorite.png';
 
 export default {
   generic,
@@ -21,4 +23,6 @@ export default {
   one, two, three, four, five, six, seven, eight, nine, ten,
   next,
   play,
+  star,
+  favorite,
 };

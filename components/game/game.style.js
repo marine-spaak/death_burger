@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 import { COLORS, SIZES } from "../../constants";
 
+// TODO harmoniser entre styles et style (singulier vs pluriel)
 const styles = StyleSheet.create({
 
   titleContainer: {
@@ -19,6 +20,30 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
+
+  nextBtn: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    width: 200,
+    padding: 10,
+    borderRadius: 9,
+    backgroundColor: '#3939A6',
+    flex:1,
+    flexDirection: "row",
+  },
+
+  nextIcon: {
+    width: 30,
+    height: 30,
+    tintColor: '#83D2EC'
+  },
+
+  nextBtnText: {
+    textAlign: 'center',
+    color: '#83D2EC',
+    fontSize: SIZES.medium,
+    flex:1,
+  }
 });
 
 export default styles;

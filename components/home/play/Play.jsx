@@ -21,6 +21,10 @@ const Play = () => {
   return (
     <View>
       <View style={styles.titleContainer}>
+        <Image
+          source={icons.star}
+          style={styles.icon}
+        />
         <Text style={styles.titleText}>Jouer</Text>
       </View>
 
@@ -30,9 +34,9 @@ const Play = () => {
           Alors allez-y !
         </Text>
 
-        <Link href={{
-          pathname: "game",
-        }}
+        <Link
+          href={{ pathname: "game" }}
+          style={styles.playBtn}
         >
           <TouchableOpacity
             onPress={() => navigation.navigate('game')}

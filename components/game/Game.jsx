@@ -7,7 +7,7 @@ import { useRouter } from 'expo-router';
 
 import styles from './game.style';
 
-import { images } from '../../constants';
+import { images, icons } from '../../constants';
 import Progress from './progress/Progress';
 import Question from './question/Question';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -19,10 +19,13 @@ const Game = () => {
     <View>
 
       <View style={styles.titleContainer}>
-        <Image
-          source={images.logo}
-          style={styles.titleLogo}
-        />
+        <TouchableOpacity>
+          <Image
+            source={images.logo}
+            style={styles.titleLogo}
+          />
+        </TouchableOpacity>
+
         <Text style={styles.largeText}>Le burger de la mort</Text>
       </View>
 
@@ -30,7 +33,15 @@ const Game = () => {
 
       <Question style={styles.container}/>
 
-      <TouchableOpacity>Passer à la suite</TouchableOpacity>
+      <TouchableOpacity
+        style={styles.nextBtn}
+      >
+        <Image
+          source={icons.next}
+          style={styles.nextIcon}
+        />
+        <Text style={styles.nextBtnText}>Passer à la suite</Text>
+      </TouchableOpacity>
     </View>
   )
 }

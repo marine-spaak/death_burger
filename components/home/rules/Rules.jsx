@@ -6,7 +6,7 @@ import {
 
 import { useRouter } from 'expo-router';
 import styles from '../homeSections.style';
-import { images } from '../../../constants';
+import { icons } from '../../../constants';
 
 const Rules = () => {
   const router = useRouter();
@@ -14,12 +14,16 @@ const Rules = () => {
   return (
     <View>
       <View style={styles.titleContainer}>
+        <Image
+          source={icons.sheet}
+          style={styles.icon}
+        />
         <Text style={styles.titleText}>Règles du jeu</Text>
       </View>
 
       <View style={styles.container}>
         <Text style={styles.text}>
-          Dix questions extrêmement sérieuses vont vous être posées. Retenez toutes les réponses dans votre tête puis restituez-les dans le bon ordre.
+          L'application va vous poser dix questions très sérieuses. Retenez toutes les réponses. Restituez-les à la fin, dans le bon ordre.
         </Text>
       </View>
     </View>
